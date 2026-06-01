@@ -1,0 +1,441 @@
+<div class="spotify-root">
+
+  <!-- ══════════════════════ TOP BAR ══════════════════════ -->
+  <nav class="topbar">
+
+    <!-- Spotify Logo -->
+    <a class="topbar-logo" href="#" title="Spotify">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+        <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+      </svg>
+    </a>
+
+    <!-- Home -->
+    <button class="topbar-icon-btn" title="Accueil">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12.5 3.247a1 1 0 00-1 0L4 7.577V20h4.5v-6h7V20H20V7.577l-7.5-4.33z"/>
+      </svg>
+    </button>
+
+    <!-- Search bar -->
+    <div class="topbar-search">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M10.533 1.279c-5.18 0-9.407 4.14-9.407 9.279s4.226 9.279 9.407 9.279c2.234 0 4.29-.77 5.907-2.058l4.353 4.353a1 1 0 101.414-1.414l-4.344-4.344a9.157 9.157 0 002.077-5.816c0-5.14-4.226-9.28-9.407-9.28zm-7.407 9.279c0-4.006 3.302-7.28 7.407-7.28s7.407 3.274 7.407 7.28-3.302 7.279-7.407 7.279-7.407-3.273-7.407-7.279z"/>
+      </svg>
+      <input id="topbar-search-input" type="text" placeholder="Que souhaitez-vous écouter ou regarder ?" class="topbar-search-input" />
+      <div class="topbar-divider"></div>
+      <button class="topbar-browse-btn" title="Parcourir">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M3 5h2V3c-1.1 0-2 .9-2 2zm0 8h2v-2H3v2zm4 8h2v-2H7v2zm-4-4h2v-2H3v2zm10-12h-2v2h2V5zm4 0v2h2c0-1.1-.9-2-2-2zM5 21v-2H3c0 1.1.9 2 2 2zm-2-4h2v-2H3v2zM9 3H7v2h2V3zm2 18h2v-2h-2v2zm8-8h2v-2h-2v2zm0 8c1.1 0 2-.9 2-2h-2v2zm0-12h2V7h-2v2zm0 8h2v-2h-2v2zm-4 4h2v-2h-2v2zm0-16h2V3h-2v2z"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Right actions -->
+    <div class="topbar-actions">
+      <button class="btn-premium" id="btn-premium">Découvrir Premium</button>
+
+      <button class="topbar-text-btn" id="btn-install">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/>
+        </svg>
+        Installer l'appli
+      </button>
+
+      <button class="topbar-sm-btn" title="Notifications" id="btn-notif">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/>
+        </svg>
+      </button>
+
+      <button class="topbar-sm-btn" title="Paramètres" id="btn-settings">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/>
+        </svg>
+      </button>
+
+      <button class="topbar-avatar" id="btn-avatar" title="Profil">D</button>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════ CONTENT WRAPPER ══════════════════════ -->
+  <div class="content-wrapper">
+
+    <!-- ═══════════════ SIDEBAR ═══════════════ -->
+    <aside class="sidebar">
+
+      <!-- Library header -->
+      <div class="lib-header">
+        <div class="lib-title">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M3 22a1 1 0 01-1-1V3a1 1 0 012 0v18a1 1 0 01-1 1zM7 22a1 1 0 01-1-1V3a1 1 0 012 0v18a1 1 0 01-1 1zM20.5 3.5a1 1 0 00-1.415 0L11 11.586V14h2.414l8.086-8.086A1 1 0 0020.5 3.5z"/>
+          </svg>
+          <span>Bibliothèque</span>
+        </div>
+        <div class="lib-header-btns">
+          <button class="lib-icon-btn" title="Créer une playlist" id="btn-create">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 3a9 9 0 100 18A9 9 0 0012 3zm4.5 9.75h-3.75v3.75h-1.5v-3.75H7.5v-1.5h3.75V7.5h1.5v3.75h3.75v1.5z"/>
+            </svg>
+          </button>
+          <button class="lib-icon-btn" title="Agrandir" id="btn-expand">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M10.659 3.659a1 1 0 010 1.414L5.37 10.343H21.5a1 1 0 110 2H5.37l5.289 5.27a1 1 0 11-1.414 1.418l-7-6.97a1 1 0 010-1.422l7-7a1 1 0 011.414 0z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Filter chips -->
+      <div class="lib-filters">
+        <button class="lib-chip active" id="chip-playlists">Playlists</button>
+        <button class="lib-chip" id="chip-artistes">Artistes</button>
+        <button class="lib-chip" id="chip-albums">Albums</button>
+      </div>
+
+      <!-- Search + sort -->
+      <div class="lib-sort-row">
+        <button class="lib-search-btn" title="Rechercher dans la bibliothèque">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M10.533 1.279c-5.18 0-9.407 4.14-9.407 9.279s4.226 9.279 9.407 9.279c2.234 0 4.29-.77 5.907-2.058l4.353 4.353a1 1 0 101.414-1.414l-4.344-4.344a9.157 9.157 0 002.077-5.816c0-5.14-4.226-9.28-9.407-9.28zm-7.407 9.279c0-4.006 3.302-7.28 7.407-7.28s7.407 3.274 7.407 7.28-3.302 7.279-7.407 7.279-7.407-3.273-7.407-7.279z"/>
+          </svg>
+        </button>
+        <div class="lib-sort">
+          <span>Récents</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M3 18h6v-2H3v2zM3 6v2h18V6H3zm0 7h12v-2H3v2z"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Library items -->
+      <div class="lib-list">
+
+        <div class="lib-item" id="lib-liked">
+          <div class="lib-thumb liked-thumb">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
+              <path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/>
+            </svg>
+          </div>
+          <div class="lib-info">
+            <span class="lib-name">Titres likés</span>
+            <span class="lib-sub">Playlist &bull; 4 titres</span>
+          </div>
+        </div>
+
+        <div class="lib-item" id="lib-aot">
+          <div class="lib-thumb" style="background:linear-gradient(135deg,#0d2137 0%,#0a4f6e 100%);"></div>
+          <div class="lib-info">
+            <span class="lib-name">Attack on Titan</span>
+            <span class="lib-sub">Playlist &bull; Spotify</span>
+          </div>
+        </div>
+
+        <div class="lib-item" id="lib-yorushika">
+          <div class="lib-thumb circle" style="background:linear-gradient(135deg,#9ca3af 0%,#6b7280 100%);"></div>
+          <div class="lib-info">
+            <span class="lib-name">ヨルシカ</span>
+            <span class="lib-sub">Artiste</span>
+          </div>
+        </div>
+
+        <div class="lib-item" id="lib-raon">
+          <div class="lib-thumb circle" style="background:linear-gradient(135deg,#7e22ce 0%,#a21caf 100%);"></div>
+          <div class="lib-info">
+            <span class="lib-name">Raon</span>
+            <span class="lib-sub">Artiste</span>
+          </div>
+        </div>
+
+        <div class="lib-item" id="lib-linked">
+          <div class="lib-thumb circle" style="background:linear-gradient(135deg,#1e3a5f 0%,#1d4ed8 100%);"></div>
+          <div class="lib-info">
+            <span class="lib-name">Linked Horizon</span>
+            <span class="lib-sub">Artiste</span>
+          </div>
+        </div>
+
+        <div class="lib-item" id="lib-yoasobi">
+          <div class="lib-thumb circle" style="background:linear-gradient(135deg,#be185d 0%,#7c3aed 100%);"></div>
+          <div class="lib-info">
+            <span class="lib-name">YOASOBI</span>
+            <span class="lib-sub">Artiste</span>
+          </div>
+        </div>
+
+        <div class="lib-item" id="lib-madiara">
+          <div class="lib-thumb circle" style="background:linear-gradient(135deg,#92400e 0%,#d97706 100%);"></div>
+          <div class="lib-info">
+            <span class="lib-name">Madiara Niane</span>
+            <span class="lib-sub">Artiste</span>
+          </div>
+        </div>
+
+        <div class="lib-item" id="lib-marhaban">
+          <div class="lib-thumb" style="background:linear-gradient(135deg,#78350f 0%,#b45309 100%);"></div>
+          <div class="lib-info">
+            <span class="lib-name">Marhaban</span>
+            <span class="lib-sub">Single &bull; Madiara Niane</span>
+          </div>
+        </div>
+
+      </div>
+    </aside>
+
+    <!-- ═══════════════ MAIN CONTENT ═══════════════ -->
+    <main class="main-content" id="main-content">
+
+      <!-- Content filters (sticky) -->
+      <div class="content-filters">
+        <button class="content-chip active" id="filter-tout">Tout</button>
+        <button class="content-chip" id="filter-musique">Musique</button>
+        <button class="content-chip" id="filter-podcasts">Podcasts</button>
+      </div>
+
+      <!-- ─── Radio tendance ─────────────────────── -->
+      <section class="section">
+        <div class="section-head">
+          <h2 class="section-title">Radio tendance</h2>
+          <a class="section-link" href="#">Tout afficher</a>
+        </div>
+        <div class="radio-grid">
+
+          <!-- Wally B. Seck -->
+          <div class="radio-card" id="card-wally">
+            <div class="radio-art" style="background:linear-gradient(155deg,#f9a8c9 0%,#f06292 35%,#ba68c8 100%);">
+              <div class="radio-art-top">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="white" opacity=".9">
+                  <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+                </svg>
+                <span class="radio-label">RADIO</span>
+              </div>
+              <div class="radio-circle" style="background:linear-gradient(135deg,#fde68a,#f59e0b,#d97706);"></div>
+              <div class="radio-artist-name">Wally B. Seck</div>
+            </div>
+            <p class="radio-desc">Avec AMADEUS, Viviane Chidid, Mia Guisse et...</p>
+          </div>
+
+          <!-- VJ -->
+          <div class="radio-card" id="card-vj">
+            <div class="radio-art" style="background:linear-gradient(155deg,#60a5fa 0%,#3b82f6 40%,#1d4ed8 100%);">
+              <div class="radio-art-top">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="white" opacity=".9">
+                  <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+                </svg>
+                <span class="radio-label">RADIO</span>
+              </div>
+              <div class="radio-circle" style="background:linear-gradient(135deg,#93c5fd,#6366f1,#4338ca);"></div>
+              <div class="radio-artist-name">VJ</div>
+            </div>
+            <p class="radio-desc">Avec AMADEUS, Jeeba, Iss 814 et bien d'autres artistes</p>
+          </div>
+
+          <!-- AMADEUS -->
+          <div class="radio-card" id="card-amadeus">
+            <div class="radio-art" style="background:linear-gradient(155deg,#f0abfc 0%,#c026d3 40%,#7c3aed 100%);">
+              <div class="radio-art-top">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="white" opacity=".9">
+                  <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+                </svg>
+                <span class="radio-label">RADIO</span>
+              </div>
+              <div class="radio-circle" style="background:linear-gradient(135deg,#f9a8d4,#ec4899,#be185d);"></div>
+              <div class="radio-artist-name">AMADEUS</div>
+            </div>
+            <p class="radio-desc">Avec VJ, Jeeba, Iss 814 et bien d'autres artistes</p>
+          </div>
+
+          <!-- Ashs The Best -->
+          <div class="radio-card" id="card-ashs">
+            <div class="radio-art" style="background:linear-gradient(155deg,#a5b4fc 0%,#6366f1 40%,#4f46e5 100%);">
+              <div class="radio-art-top">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="white" opacity=".9">
+                  <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+                </svg>
+                <span class="radio-label">RADIO</span>
+              </div>
+              <div class="radio-circle" style="background:linear-gradient(135deg,#818cf8,#4f46e5,#3730a3);"></div>
+              <div class="radio-artist-name">Ashs The Best</div>
+            </div>
+            <p class="radio-desc">Avec AMADEUS, Iss 814, Baye Mass et bien...</p>
+          </div>
+
+          <!-- Mia Guisse -->
+          <div class="radio-card" id="card-mia">
+            <div class="radio-art" style="background:linear-gradient(155deg,#fef08a 0%,#84cc16 40%,#15803d 100%);">
+              <div class="radio-art-top">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="white" opacity=".9">
+                  <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+                </svg>
+                <span class="radio-label">RADIO</span>
+              </div>
+              <div class="radio-circle" style="background:linear-gradient(135deg,#fde047,#f59e0b,#d97706);"></div>
+              <div class="radio-artist-name">Mia Guisse</div>
+            </div>
+            <p class="radio-desc">Avec AMADEUS, Viviane Chidid, Jeeba et bien...</p>
+          </div>
+
+          <!-- Khalid -->
+          <div class="radio-card" id="card-khalid">
+            <div class="radio-art" style="background:linear-gradient(155deg,#fb923c 0%,#dc2626 40%,#7f1d1d 100%);">
+              <div class="radio-art-top">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="white" opacity=".9">
+                  <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+                </svg>
+                <span class="radio-label">RADIO</span>
+              </div>
+              <div class="radio-circle" style="background:linear-gradient(135deg,#fca5a5,#ef4444,#b91c1c);"></div>
+              <div class="radio-artist-name">Khalid</div>
+            </div>
+            <p class="radio-desc">Avec Ruma, Dababy, Zayn et bien d'autres artistes</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ─── Artistes populaires ────────────────── -->
+      <section class="section">
+        <div class="section-head">
+          <h2 class="section-title">Artistes populaires</h2>
+          <a class="section-link" href="#">Tout afficher</a>
+        </div>
+        <div class="artist-grid">
+
+          <div class="artist-card" id="artist-amadeus">
+            <div class="artist-img" style="background:linear-gradient(155deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);"></div>
+            <div class="artist-name">AMADEUS</div>
+            <div class="artist-sub">Artiste</div>
+          </div>
+
+          <div class="artist-card" id="artist-mia">
+            <div class="artist-img" style="background:linear-gradient(155deg,#fde68a 0%,#84cc16 50%,#166534 100%);"></div>
+            <div class="artist-name">Mia Guisse</div>
+            <div class="artist-sub">Artiste</div>
+          </div>
+
+          <div class="artist-card" id="artist-vj">
+            <div class="artist-img" style="background:linear-gradient(155deg,#bfdbfe 0%,#3b82f6 50%,#1e40af 100%);"></div>
+            <div class="artist-name">VJ</div>
+            <div class="artist-sub">Artiste</div>
+          </div>
+
+          <div class="artist-card" id="artist-wally">
+            <div class="artist-img" style="background:linear-gradient(155deg,#fde68a 0%,#f59e0b 50%,#92400e 100%);"></div>
+            <div class="artist-name">Wally B. Seck</div>
+            <div class="artist-sub">Artiste</div>
+          </div>
+
+          <div class="artist-card" id="artist-dadju">
+            <div class="artist-img" style="background:linear-gradient(155deg,#f0fdf4 0%,#4ade80 50%,#15803d 100%);"></div>
+            <div class="artist-name">Dadju</div>
+            <div class="artist-sub">Artiste</div>
+          </div>
+
+          <div class="artist-card" id="artist-tiakola">
+            <div class="artist-img" style="background:linear-gradient(155deg,#fca5a5 0%,#ef4444 50%,#7f1d1d 100%);"></div>
+            <div class="artist-name">Tiakola</div>
+            <div class="artist-sub">Artiste</div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- ══════════════════════ PLAYER BAR ══════════════════════ -->
+  <div class="playerbar">
+
+    <!-- Left: track info -->
+    <div class="player-left">
+      <div class="player-art" style="background:linear-gradient(135deg,#374151,#111827);"></div>
+      <div class="player-track">
+        <span class="player-track-name" id="player-track-name">--</span>
+        <span class="player-track-artist" id="player-track-artist">--</span>
+      </div>
+      <button class="player-heart" id="player-like" title="Ajouter aux titres likés">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Center: controls + progress -->
+    <div class="player-center">
+      <div class="player-controls">
+        <!-- Shuffle -->
+        <button class="ctrl-btn" id="btn-shuffle" title="Lecture aléatoire">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M14.83 13.83l1.94-1.94-1.94-1.94L16.25 8.5l3.25 3.5-3.25 3.5-1.42-1.67zm-5.66 0L7.23 11.89l1.94-1.94L7.75 8.5 4.5 12l3.25 3.5 1.42-1.67zm8.66-9.5l-1.41 1.41.94.94-3.03 3.03-2.85-2.85-4.62 4.64 1.41 1.41 3.21-3.22 2.85 2.86 4.44-4.43.93.93 1.41-1.41L17.83 4.33z"/>
+          </svg>
+        </button>
+        <!-- Previous -->
+        <button class="ctrl-btn" id="btn-prev" title="Précédent">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/>
+          </svg>
+        </button>
+        <!-- Play / Pause -->
+        <button class="ctrl-play" id="btn-play" title="Lecture">
+          <svg id="icon-play" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M8 5v14l11-7z"/>
+          </svg>
+        </button>
+        <!-- Next -->
+        <button class="ctrl-btn" id="btn-next" title="Suivant">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M6 18l8.5-6L6 6v12zm2-8.14L11.03 12 8 14.14V9.86zm6.5-3.86v12h2V6h-2z"/>
+          </svg>
+        </button>
+        <!-- Repeat -->
+        <button class="ctrl-btn" id="btn-repeat" title="Répéter">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Progress bar -->
+      <div class="player-progress">
+        <span class="p-time" id="player-current">-:--</span>
+        <div class="p-bar" id="p-bar">
+          <div class="p-fill" id="p-fill" style="width:0%;"></div>
+        </div>
+        <span class="p-time" id="player-total">-:--</span>
+      </div>
+    </div>
+
+    <!-- Right: extras -->
+    <div class="player-right">
+      <!-- Queue -->
+      <button class="ctrl-btn" title="File d'attente" id="btn-queue">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M15 6H3v2h12V6zm0 4H3v2h12v-2zM3 16h8v-2H3v2zM17 6v8.18c-.31-.11-.65-.18-1-.18-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3V8h3V6h-5z"/>
+        </svg>
+      </button>
+      <!-- Device -->
+      <button class="ctrl-btn" title="Se connecter à un appareil" id="btn-device">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M4 6h18V4H4c-1.1 0-2 .9-2 2v11H0v3h14v-3H4V6zm19 2h-6c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V9c0-.55-.45-1-1-1zm-1 9h-4v-7h4v7z"/>
+        </svg>
+      </button>
+      <!-- Volume -->
+      <button class="ctrl-btn" title="Son" id="btn-volume">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+        </svg>
+      </button>
+      <!-- Volume bar -->
+      <div class="vol-bar" id="vol-bar" title="Volume">
+        <div class="vol-fill" id="vol-fill"></div>
+      </div>
+      <!-- Expand -->
+      <button class="ctrl-btn" title="Plein écran" id="btn-fullscreen">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+</div>

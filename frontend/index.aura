@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <meta name="description" content="Spotify — Musique pour tous.">
+    <link rel="icon" type="image/png" href="public/assets/logo.png">
+    <link rel="stylesheet" href="src/styles/main.css">
+    <script src="aura/aura.js"></script>
+</head>
+<body>
+
+<aura>
+    include 'src/includes/app.aura'
+</aura>
+
+</body>
+</html>

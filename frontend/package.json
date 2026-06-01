@@ -1,0 +1,16 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "Professional AuraJS Enterprise-Ready Template",
+  "main": "run.js",
+  "scripts": {
+    "dev": "node run.js",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "aurajs",
+    "framework"
+  ],
+  "author": "",
+  "license": "ISC"
+}

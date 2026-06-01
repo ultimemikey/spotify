@@ -1,0 +1,6 @@
+<nav class="sidebar">
+  <a href="#home" class="active">Accueil</a>
+  <a href="#search">Recherche</a>
+  <a href="#library">Bibliothèque</a>
+  <a href="#playlist">Playlists</a>
+</nav>

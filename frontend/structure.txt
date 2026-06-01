@@ -1,0 +1,57 @@
+╔════════════════════════════════════════════════════════════╗
+║             ⚡ AuraJS — Professional Enterprise Architecture║
+╚════════════════════════════════════════════════════════════╝
+
+This document outlines the RECOMMENDED enterprise-ready structure 
+for a high-scale AuraJS application. It separates concerns across 
+logic, data, and presentation layers for maximum maintainability.
+
+📁 ROOT DIRECTORY
+├── 📄 index.aura          # Primary entry point. Orchestrates the layout
+│                          # and includes components and styles.
+├── 📄 run.js              # Development server logic. 
+├── 📄 server.js           # Supplementary server/API configuration.
+├── 📄 vercel.json         # Configuration for deployment on Vercel.
+└── � package.json        # Dependencies and scripts.
+
+📁 SRC (Application Layer)
+│
+├── 📁 includes/           # Modular AuraJS components and partials.
+│   └── 📄 header.aura     # Reusable UI fragments.
+│
+├── 📁 styles/             # Centralized design system.
+│   └── 📄 main.css        # Global theme (Responsive).
+│
+├── 📁 middleware/         # [NEW] Logic executed before main processing.
+│   └── 📄 auth.aura       # e.g., Session verification, guards.
+│
+├── 📁 services/           # [NEW] Business logic & external API calls.
+│   └── 📄 api_service.js  # Separates UI logic from raw data fetching.
+│
+├── 📁 providers/          # [NEW] Utility & data providers.
+│   └── 📄 state.js        # Global state management modules.
+│
+├── 📁 routes/             # Advanced routing configuration.
+│   └── 📄 web.aura        # Defines URL paths and redirects.
+│
+└── 📁 utils/              # [NEW] Reusable JavaScript helpers.
+
+📁 PUBLIC (Client-Side Assets)
+│
+├── 📁 assets/             # Brand media (Logos, Icons).
+├── 📁 vendor/             # [NEW] 3rd party scripts (Three.js, etc).
+└── � favicon/            # Browser identity assets.
+
+📁 AURA (Framework Core)
+│   # Framework internals. DO NOT MODIFY.
+├── 📄 aura.js             # Runtime engine.
+├── 📁 core/               # Lexer, Parser, Renderer.
+└── 📁 module/             # Framework extensions.
+
+📁 STORAGE & DEPLOY
+├── 📁 storage/            # Logs, cache, and temporary files.
+└── 📁 .github/            # CI/CD workflows and automation scripts.
+
+ ______________________________________________________________
+ Evolved Architecture proposed by Antigravity for AuraJS.
+ Focused on scalability, security, and developer efficiency.

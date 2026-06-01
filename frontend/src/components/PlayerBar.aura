@@ -1,0 +1,7 @@
+<footer class="player-bar">
+  <button class="play-btn">▶︎</button>
+  <div class="track-info">
+    <span class="track-title">Titre de la piste</span> – <span class="track-artist">Artiste</span>
+  </div>
+  <button class="next-btn">⏭︎</button>
+</footer>
