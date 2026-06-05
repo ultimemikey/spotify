@@ -1,16 +1,22 @@
 {
-  "name": "frontend",
+  "name": "aura-js-app",
   "version": "1.0.0",
-  "description": "Professional AuraJS Enterprise-Ready Template",
-  "main": "run.js",
+  "description": "Aura JS - Custom lightweight framework running on Vercel",
+  "main": "server.js",
   "scripts": {
-    "dev": "node run.js",
-    "start": "node server.js"
+    "dev": "node server.js",
+    "start": "node server.js",
+    "build": "echo \"No build step required\""
   },
   "keywords": [
     "aurajs",
-    "framework"
+    "framework",
+    "node",
+    "vercel"
   ],
-  "author": "",
-  "license": "ISC"
+  "author": "Aura JS",
+  "license": "ISC",
+  "engines": {
+    "node": ">=18"
+  }
 }
